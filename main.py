@@ -10,6 +10,7 @@ dataBase = client["neurolabDB"]
 collection = dataBase['Products']
 
 # Sample data
+
 d = {'companyName': 'iNeuron',
      'product': 'Affordable AI',
      'courseOffered': 'Machine Learning with Deployment'}
