@@ -4,7 +4,7 @@ import json
 # Provide the mongodb localhost url to connect python to mongodb.
 client = pymongo.MongoClient("mongodb://localhost:27017/neurolabDB")
 database_name="aps"
-collection_name="aps-data"
+collection_name="sensor"
 
 data_file_path="/config/workspace/aps_failure_training_set1.csv"
 
