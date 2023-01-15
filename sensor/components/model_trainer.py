@@ -24,7 +24,6 @@ class ModelTrainer:
 
     def fine_tune(self):
         try:
-            #Wite code for Grid Search CV
             pass
             
 
