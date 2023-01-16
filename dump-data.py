@@ -1,8 +1,10 @@
 import pymongo
 import pandas as pd
 import json
+
+from sensor.config import mongo_client
 # Provide the mongodb localhost url to connect python to mongodb.
-client = pymongo.MongoClient("mongodb://localhost:27017/neurolabDB")
+
 database_name="aps"
 collection_name="sensor"
 
@@ -20,6 +22,6 @@ json_record=list(json.loads(df.T.to_json()).values())
 print(json_record[0])
 
 
-# insert data in mongodb
+# insert converted json record  in mongodb
 
-client[database_name][collection_name].insert_many(json_record)
+mongo_client[database_name][collection_name].insert_many(json_record)
